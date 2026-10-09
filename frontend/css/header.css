@@ -1,0 +1,217 @@
+.header {
+    /* Establecemos el ancho del encabezado al 100% */
+    width: 100%;
+    /* Establecemos el color de fondo del encabezado */
+    background-color: #ffffff;
+    /* Agrega un borde inferior*/
+    border-bottom: 1px solid #e6e6e6;
+    overflow: visible;
+
+}
+
+.contenedor-header {
+    /* Establecemos un ancho máximo para el contenedor del encabezado */
+    max-width: 1120px;
+    /* Establecemos una altura mínima para el contenedor del encabezado */
+    min-height: 76px;
+    /* Centramos el contenedor del encabezado horizontalmente */
+    margin: 0 auto;
+    /* Agregar espacios a los lados del contenedor del encabezado */
+    padding: 0 24px;
+
+    /* Establecemos la propiedad display en flex para que los elementos hijos se alineen en una fila */
+    display: flex;
+    /* Alineamos los elementos hijos verticalmente al centro */
+    align-items: center;
+    /* Distribuimos el espacio entre los elementos hijos de manera uniforme */
+    justify-content: space-between;
+    /* Establecemos una separaccion entre los elementos*/
+    gap: 32px;
+}
+
+.logo {
+    /* coloca el texto y el logo en una fila */
+    display: flex;
+    /* Alineamos los elementos hijos verticalmente al centro */
+    align-items: center;
+    /* Establecemos una separaccion entre los elementos*/
+    gap: 10px;
+
+    /* Establecemos el color del texto*/
+    color: #10233f;
+    /* quitamos el subrayado del enlace */
+    text-decoration: none;
+    /* Establece el grosor de la letra*/
+    font-weight: 700;
+    /* Establece el tamaño de la letra*/
+    font-size: 20px;
+}
+
+.logo-icono {
+    /*Define el ancho del icono*/
+    width: 40px;
+    /*Defina el alto del icono*/
+    height: 40px;
+    /*Redondea las esquinas del icono*/
+    border-radius: 12px;
+
+    /* permite organizar el contenido del icono*/
+    display: flex;
+    /* centra el contenido del icono verticalmente*/
+    align-items: center;
+    /*centra el contenido del icono horizontalmente*/
+    justify-content: center;
+
+    /* Establece el color de fondo del icono*/
+    background-color: #2585ed;
+    /*cambio el color del simbolo del icono a blanco*/
+    color: white;
+    /*Define el tamano del simbolo*/
+    font-size: 23px;
+}
+
+.navegacion {
+    /* coloca los enlaces en una fila*/
+    display: flex;
+    /*los alinea verticalmente al centro*/
+    align-items: center;
+    /*separa los enlaces entre si*/
+    gap: 32px;
+
+}
+
+.enlace {
+    /*Color del texto subrayado*/
+    color: #405570;
+    /*Quita el subrayado del enlace*/
+    text-decoration: none;
+    /*define el tamano de la letra*/
+    font-size: 14px;
+    /* hace que la letra sea semi-negrita*/
+    font-weight: 600;
+}
+
+.boton-ubicacion {
+    /* Organiza el icono y el texto en una fila */
+    display: flex;
+    /* Los alinea verticalmente al centro */
+    align-items: center;
+    /* Centra el contenido horizontalmente */
+    justify-content: center;
+    /* Separa el icono del texto */
+    gap: 10px;
+
+    /* Agrega espacio interno al botón */
+    padding: 12px 18px;
+    /* Agrega un borde azul claro */
+    border: 1px solid #d6e7ff;
+    /* Redondea las esquinas */
+    border-radius: 30px;
+
+    /* Establece un fondo azul muy claro */
+    background-color: #f1f7ff;
+    /* Define el color del texto */
+    color: #1672e8;
+
+    /* Define el tamaño de la letra */
+    font-size: 14px;
+    /* Hace que la letra sea seminegrita */
+    font-weight: 600;
+    /* Evita que el texto se divida en varias líneas */
+    white-space: nowrap;
+    /* Muestra una mano al pasar el cursor */
+    cursor: pointer;
+
+}
+
+
+/* El menú móvil se muestra únicamente en pantallas pequeñas */
+.menu-movil {
+    display: none;
+}
+
+/* El botón de menú solo se utiliza en pantallas pequeñas */
+.menu-movil summary {
+    display: none;
+    /* Muestra una mano al pasar el cursor sobre el botón */
+    cursor: pointer;
+    /* Establece el tamaño del símbolo del menú */
+    font-size: 24px;
+    /* Define el color del símbolo del menú */
+    color: #1672e8;
+    /* Quita el marcador predeterminado del elemento summary */
+    list-style: none;
+}
+
+/* Aplica estos estilos cuando el ancho de la pantalla es de 600px o menos */
+@media (max-width: 600px) {
+
+    /* Ajusta el contenedor principal del encabezado para móviles */
+    .contenedor-header {
+        /* Establece una altura mínima de 68px */
+        min-height: 68px;
+        /* Agrega espacio interno a los lados del contenedor */
+        padding: 0 16px;
+        /* Reduce la separación entre los elementos del encabezado */
+        gap: 12px;
+    }
+
+    /* Organiza los enlaces de navegación en una columna */
+    .navegacion {
+        /* Utiliza Flexbox para organizar los enlaces */
+        display: flex;
+        /* Coloca los elementos uno debajo del otro */
+        flex-direction: column;
+        /* Alinea los elementos al inicio horizontalmente */
+        align-items: flex-start;
+        /* Establece una separación de 18px entre los elementos */
+        gap: 18px;
+    }
+
+    /* Muestra el menú desplegable únicamente en móviles */
+    .menu-movil {
+        /* Hace visible el elemento */
+        display: block;
+        /* Permite posicionar el menú desplegado respecto a este elemento */
+        position: relative;
+    }
+
+    /* Oculta la navegación horizontal en móviles */
+    .navegacion-escritorio {
+        display: none;
+    }
+
+    /* Muestra el botón que permite abrir y cerrar el menú */
+    .menu-movil summary {
+        display: block;
+    }
+
+    /* Aplica estos estilos a la navegación cuando el menú está abierto */
+    .menu-movil[open] .navegacion {
+        /* Permite superponer el menú sin desplazar el contenido de la página */
+        position: absolute;
+        /* Coloca el menú 35px por debajo de su posición de referencia */
+        top: 35px;
+        /* Alinea el borde derecho del menú con el borde derecho de su contenedor */
+        right: 0;
+        /* Establece el ancho del menú desplegable */
+        width: 190px;
+        /* Agrega espacio interno entre el contenido y los bordes */
+        padding: 20px;
+        /* Establece el fondo blanco del menú */
+        background: white;
+        /* Agrega un borde gris claro */
+        border: 1px solid #e6e6e6;
+        /* Redondea las esquinas del menú */
+        border-radius: 12px;
+        /* Agrega una sombra suave alrededor del menú */
+        box-shadow: 0 4px 12px #00000015;
+        /* Coloca el menú por encima de otros elementos de la página */
+        z-index: 100;
+    }
+
+    /* Evita que el texto del botón de ubicación se divida en varias líneas */
+    .boton-ubicacion {
+        white-space: nowrap;
+    }
+}
