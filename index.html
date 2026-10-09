@@ -2,12 +2,55 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"> <!--Establece la codificación de caracteres a UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Configura la vista para dispositivos
+    móviles-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!--Preconexión a Google Fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!--Preconexión a Google Fonts con CORS-->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"> <!--Importa la
+    fuente Inter desde Google Fonts-->
+    <link rel="icon" href="frontend/images/favicon.png" type="image/png">
+    <link rel="shortcut icon" href="frontend/images/favicon.png" type="image/png">
+    <title>ClimaRuta | Clima y Destinos</title>
+    <link rel="stylesheet" href="frontend/css/styles.css"> <!--Enlaza el archivo CSS externo-->
+    <link rel="stylesheet" href="frontend/css/header.css"> <!--Enlaza el archivo CSS para el header-->
 
 </head>
-<header></header>
 
-<body></body>
-<footer></footer>
+<body>
+    <header class="header">
+        <div class="contenedor-header">
+            <a href="#inicio" class="logo">
+                <span class="logo-icono">☀️</span>
+                <span class="logo-texto">ClimaRuta</span>
+            </a>
+
+            <nav class="navegacion navegacion-escritorio">
+                <a href="#inicio" class="enlace">Inicio</a>
+                <a href="#clima" class="enlace">Clima</a>
+                <a href="#explorar" class="enlace">Explorar</a>
+                <button type="button" class="boton-ubicacion">Mi ubicacion</button>
+            </nav>
+
+            <details class="menu-movil">
+                <summary>☰</summary>
+
+                <nav class="navegacion navegacion-movil">
+                    <a href="#inicio" class="enlace">Inicio</a>
+                    <a href="#clima" class="enlace">Clima</a>
+                    <a href="#explorar" class="enlace">Explorar</a>
+                    <button type="button" class="boton-ubicacion">Mi ubicacion</button>
+                </nav>
+            </details>
+
+
+        </div>
+
+    </header>
+    <main>
+
+    </main>
+    <footer></footer>
+</body>
 
 </html>

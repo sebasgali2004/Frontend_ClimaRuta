@@ -1,0 +1,12 @@
+* {
+    /* Quitamos los margenes predeterminados del navegador*/
+    box-sizing: border-box;
+}
+
+body {
+    /* Quitamos los margenes predeterminados del navegador*/
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: #f1f8ff;
+
+}
